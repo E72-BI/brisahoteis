@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painéis Operacionais | Rede Brisa Hotéis</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="content-container" style="display: block;">
+        <header>
+            <div class="logo">
+                <a href="https://www.brisahoteis.com.br/" target="_blank">
+                    <img src="https://lirp.cdn-website.com/e3ef1bfd/dms3rep/multi/opt/branco-sem-fundo-367w.png" alt="Logo Brisa Hotéis">
+                </a>
+            </div>
+        </header>
+        
+        <section class="hero">
+            <h1>Painéis Operacionais | Rede Brisa Hotéis</h1>
+            <p>Acesse rapidamente os dashboards de gestão para monitoramento e análise operacional.</p>
+        </section>
+        
+        <div class="dashboards">
+            <div class="dashboard-card">
+                <h3><i class="fas fa-tools"></i> Manutenção</h3>
+                <p>Acompanhe o fluxo das ordens de serviço (OS). Identifique rapidamente o status de cada solicitação e otimize a execução das manutenções.</p>
+                <div class="card-actions">
+                    <a href="https://bit.ly/brisa_checklist" target="_blank" class="action-link bi-link"><i class="fas fa-chart-bar"></i> Acessar BI</a>
+                </div>
+            </div>
+            
+            <div class="dashboard-card">
+                <h3><i class="fas fa-clipboard-check"></i> PMOC</h3>
+                <p>Monitore o Plano de Manutenção, Operação e Controle (PMOC) para garantir conformidade com as normas e padrões de qualidade.</p>
+                <div class="card-actions">
+                    <a href="https://bit.ly/brisa_pmoc" target="_blank" class="action-link bi-link"><i class="fas fa-chart-bar"></i> Acessar BI</a>
+                </div>
+            </div>
+            
+            <div class="dashboard-card">
+                <h3><i class="fas fa-hotel"></i> Governanta</h3>
+                <p>Controle e acompanhe inspeções operacionais para garantir a padronização e qualidade dos serviços de governança.</p>
+                <div class="card-actions">
+                    <a href="https://bit.ly/brisa_governantas" target="_blank" class="action-link bi-link"><i class="fas fa-chart-bar"></i> Acessar BI</a>
+                </div>
+            </div>
+            
+            <div class="dashboard-card">
+                <h3><i class="fas fa-stream"></i> Linha do Tempo</h3>
+                <p>Analise o impacto das manutenções preventivas na redução das solicitações da recepção.</p>
+                <div class="card-actions">
+                    <a href="https://bit.ly/brisa_timeline" target="_blank" class="action-link bi-link"><i class="fas fa-chart-bar"></i> Acessar BI</a>
+                </div>
+            </div>
+            
+            <div class="dashboard-card">
+                <h3><i class="fas fa-star"></i> Qualidade</h3>
+                <p>Monitore indicadores de satisfação dos hóspedes e identifique oportunidades de melhoria.</p>
+                <div class="card-actions">
+                    <a href="https://bit.ly/brisa_qualidade" target="_blank" class="action-link bi-link"><i class="fas fa-chart-bar"></i> Acessar BI</a>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            &copy; 2025 Rede Brisa Hotéis - Todos os direitos reservados
+        </footer>
+    </div>
+    
+    <script>
+        function copyToClipboard(url) {
+            // Construir URL completa com base na localização atual
+            const baseUrl = window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1);
+            const fullUrl = baseUrl + url;
+            
+            navigator.clipboard.writeText(fullUrl)
+                .then(() => {
+                    alert('Link copiado para a área de transferência!');
+                })
+                .catch(err => {
+                    console.error('Erro ao copiar: ', err);
+                    alert('Erro ao copiar link. Tente novamente.');
+                });
+        }
+        
+        function copyBILink(url) {
+            navigator.clipboard.writeText(url)
+                .then(() => {
+                    alert('Link direto do Power BI copiado para a área de transferência!');
+                })
+                .catch(err => {
+                    console.error('Erro ao copiar: ', err);
+                    alert('Erro ao copiar link. Tente novamente.');
+                });
+        }
+    </script>
+</body>
+</html>
