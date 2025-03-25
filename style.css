@@ -15,53 +15,55 @@ body {
     line-height: 1.4;
     background: var(--secondary);
     color: #333;
+    font-size: 1.2rem; /* Base font size increased */
 }
 
 header {
     background: var(--primary);
-    padding: 0 5%; /* Removido o padding vertical */
+    padding: 0 5%;
     display: flex;
-    justify-content: space-between;
-    align-items: center; /* Isso já está centralizando verticalmente */
-    height: 60px;
+    justify-content: center;
+    align-items: center;
+    height: 70px; /* Increased height */
 }
 
 .logo img {
-    height: 40px; /* Reduzindo ligeiramente para ter mais espaço em cima e embaixo */
-    display: block; /* Garantir que não haja espaço extra abaixo da imagem */
+    height: 52px; /* 30% larger than original 40px */
+    display: block;
+    margin: 0 auto;
 }
 
 .hero {
-    padding: 0.3rem 3%;
+    padding: 0.36rem 3%;
     text-align: center;
     color: var(--primary);
 }
 
 .hero h1 {
-    font-size: clamp(1.1rem, 3vw, 1.6rem);
-    margin-bottom: 0.1rem;
-    margin-top: 0.5rem;
+    font-size: clamp(1.32rem, 3.6vw, 1.92rem);
+    margin-bottom: 0.12rem;
+    margin-top: 0.6rem;
 }
 
 .hero p {
-    font-size: clamp(0.7rem, 1.8vw, 0.8rem); /* Reduzido de 0.8rem para 0.7rem */
+    font-size: clamp(0.84rem, 2.16vw, 0.96rem);
     max-width: 800px;
     margin: 0 auto;
 }
 
 .dashboards {
     max-width: 900px;
-    margin: 0.7rem auto;
+    margin: 0.84rem auto;
     padding: 0 4%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 0.8rem;
+    gap: 0.96rem;
 }
 
 .dashboard-card {
     background: white;
     border-radius: 8px;
-    padding: 0.8rem;
+    padding: 0.96rem;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
     display: flex;
@@ -71,23 +73,23 @@ header {
 }
 
 .dashboard-card:hover {
-    transform: translateY(-3px);
+    transform: translateY(-4px);
 }
 
 .dashboard-card h3 {
     color: var(--primary);
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.24rem;
     display: flex;
     align-items: center;
-    gap: 0.4rem;
-    font-size: clamp(0.8rem, 1.5vw, 0.8rem);
+    gap: 0.48rem;
+    font-size: clamp(0.96rem, 1.8vw, 0.96rem);
 }
 
 .dashboard-card p {
     color: #666;
     line-height: 1.3;
-    font-size: clamp(0.7rem, 1.4vw, 0.75rem); /* Reduzido de 0.75rem para 0.7rem */
-    margin-bottom: 0.4rem;
+    font-size: clamp(0.84rem, 1.68vw, 0.9rem);
+    margin-bottom: 0.48rem;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -98,27 +100,27 @@ header {
 .card-actions {
     display: flex;
     flex-direction: column;
-    gap: 0.2rem;
+    gap: 0.24rem;
 }
 
 .action-link, .copy-btn {
     color: var(--primary);
     text-decoration: none;
     font-weight: bold;
-    padding: 0.2rem 0.5rem;
+    padding: 0.24rem 0.6rem;
     border-radius: 4px;
     transition: background 0.3s ease, color 0.3s ease;
-    font-size: clamp(0.65rem, 1.4vw, 0.7rem); /* Reduzido de 0.7rem para 0.65rem */
-    margin: 0.1rem 0;
+    font-size: clamp(0.78rem, 1.68vw, 0.84rem);
+    margin: 0.12rem 0;
     display: flex;
     align-items: center;
     text-align: left;
     justify-content: flex-start;
-    gap: 0.3rem;
+    gap: 0.36rem;
     max-width: 200px;
-    margin-left: 0.5rem;
+    margin-left: 0.6rem;
     position: relative;
-    padding-left: 0.5rem;
+    padding-left: 0.6rem;
 }
 
 .action-link:hover, .copy-btn:hover {
@@ -139,91 +141,80 @@ footer {
     background: var(--primary);
     color: white;
     text-align: center;
-    padding: 0.4rem;
-    font-size: clamp(0.65rem, 1.4vw, 0.75rem); /* Reduzido de 0.7rem para 0.65rem */
+    padding: 0.48rem;
+    font-size: clamp(0.78rem, 1.68vw, 0.9rem);
 }
 
-/* Estilo para páginas de detalhes */
 .panel-content {
     max-width: 800px;
-    margin: 1.5rem auto;
+    margin: 1.8rem auto;
     padding: 0 4%;
 }
 
 .panel-content h2 {
     color: var(--primary);
-    margin-bottom: 0.8rem;
-    font-size: clamp(1rem, 2vw, 1.2rem); /* Novo - reduzido tamanho dos títulos H2 */
+    margin-bottom: 0.96rem;
+    font-size: clamp(1.2rem, 2.4vw, 1.44rem);
 }
 
 .panel-content p, .panel-content li {
-    font-size: 0.75rem; /* Novo - tamanho reduzido para descrições */
+    font-size: 0.9rem;
     color: #555;
 }
 
 .back-link {
     display: inline-block;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.96rem;
     color: var(--primary);
     text-decoration: none;
     font-weight: bold;
 }
 
-.back-link:hover {
-    text-decoration: underline;
-}
-
 .data-section {
     background: white;
     border-radius: 8px;
-    padding: 1.2rem;
-    margin-bottom: 1.2rem;
+    padding: 1.44rem;
+    margin-bottom: 1.44rem;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .data-section h3 {
     color: var(--primary);
-    margin-bottom: 0.6rem;
-    font-size: 1rem; /* Reduzido de 1.1rem para 1rem */
+    margin-bottom: 0.72rem;
+    font-size: 1.2rem;
 }
 
 .data-section p {
-    margin-bottom: 0.5rem;
-    font-size: 0.75rem; /* Novo - tamanho reduzido para parágrafos */
-}
-
-.data-section ul, .data-section ol {
-    padding-left: 1.2rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.6rem;
+    font-size: 0.9rem;
 }
 
 .data-metrics {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 0.8rem;
-    margin-top: 0.8rem;
+    gap: 0.96rem;
+    margin-top: 0.96rem;
 }
 
 .metric-card {
     background: var(--secondary);
-    padding: 0.8rem;
+    padding: 0.96rem;
     border-radius: 8px;
     text-align: center;
 }
 
 .metric-value {
-    font-size: 1.6rem;
+    font-size: 1.92rem;
     font-weight: bold;
     color: var(--primary);
-    margin: 0.4rem 0;
+    margin: 0.48rem 0;
 }
 
 .metric-label {
-    font-size: 0.8rem; /* Reduzido de 0.85rem para 0.8rem */
+    font-size: 0.96rem;
     color: #666;
 }
 
-/* Login */
 #login-overlay {
     position: fixed;
     top: 0;
@@ -239,7 +230,7 @@ footer {
 
 .login-box {
     background: var(--primary);
-    padding: 1.5rem;
+    padding: 1.8rem;
     border-radius: 8px;
     width: 90%;
     max-width: 350px;
@@ -248,20 +239,20 @@ footer {
 }
 
 .login-logo {
-    width: 160px;
-    margin-bottom: 0.8rem;
+    width: 192px; /* 20% larger */
+    margin-bottom: 0.96rem;
 }
 
 .login-box h2 {
     color: white;
-    margin-bottom: 1.2rem;
-    font-size: 1.2rem;
+    margin-bottom: 1.44rem;
+    font-size: 1.44rem;
 }
 
 .login-box input {
     width: 100%;
-    padding: 0.6rem;
-    margin-bottom: 0.8rem;
+    padding: 0.72rem;
+    margin-bottom: 0.96rem;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
@@ -270,14 +261,10 @@ footer {
     background: white;
     color: var(--primary);
     border: none;
-    padding: 0.6rem 1.2rem;
+    padding: 0.72rem 1.44rem;
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
-}
-
-.login-box button:hover {
-    background: #f0f0f0;
 }
 
 .content-container {
